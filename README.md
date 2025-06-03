@@ -1,6 +1,6 @@
 # HasNotes
 
-This is a haskell markdown parser that parses .md files to your terminal. The app is designed for users display their markown files in a terminal freindly output. 
+This is a haskell markdown parser that parses .md files to your terminal. The app is designed for users display their markown files in a terminal friendly output. 
 
 # Requirements
 As previously mentioned this app is serves as a markdown parser. I would recommend writing your .md files in your favourite text editor (vim for the win) and then using this app to see how the output will look on your computer.
