@@ -6,6 +6,8 @@ import System.IO
 import System.Directory
 import Control.Exception
 import System.FilePath
+import Parser (readLine)
+import Control.Monad (unless)
 
 notesDir :: String
 notesDir = "hasnotes"
@@ -16,6 +18,7 @@ printHelp = do
     putStrLn "Here is a list of commands to use the notes app!\n"
     putStrLn "--help, --h \t\t These show this help prompt!"
     putStrLn "--ldr \t\t list directory where your notes are saved!"
+    putStrLn "pn \t\t Print Note, this prints the notes"
     parseInput
 
 
@@ -57,6 +60,7 @@ parseInput = do
     "--h"    -> printHelp
     "exit"   -> return ()
     "--ldr"  -> listNotesDirectory
+    "pn"     -> readLine >> parseInput
     _        -> parseInput
 
 someFunc :: IO ()

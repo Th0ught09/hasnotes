@@ -1,0 +1,29 @@
+# Stack build artifacts
+/.stack-work/
+
+# Cabal build artifacts
+/dist-newstyle/
+/dist/
+/cabal.project.local
+/notes-app.buildinfo
+/notes-app.buildinfo.d
+
+# GHC files
+*.hi
+*.o
+*.dyn_o
+*.dyn_hi
+
+# Editor/OS-generated files
+*~
+*.swp
+.DS_Store
+Thumbs.db
+
+# VSCode or other IDE files
+/.vscode/
+/.idea/
+
+# Haskell tags
+/TAGS
+*.tags
