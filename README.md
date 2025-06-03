@@ -12,8 +12,4 @@ This app is coded in haskell, and can be run with ```stack run```.
    
 - Store raw markdown in hasnotes directory
    
-- When displaying, parse markdown to AST
-   
-- Convert AST to formatted terminal output
-   
-- Display with colors/formatting in terminal
+- The user then uses this app to parse and display with colors/formatting in terminal

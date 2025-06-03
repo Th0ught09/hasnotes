@@ -1,10 +1,16 @@
-module Parser (readLine) where
+module Parser (readMarkdownFile) where
 
 import System.Console.ANSI
 import Control.Monad (unless)
 import DisplayHeaders
 
 testCases = "#Header1\n##Header2\n###Header3\n####Header4\n#####Header5\n######Header6\ntext"
+
+readMarkdownFile :: FilePath -> IO ()
+readMarkdownFile filePath = do
+  contents <- readFile filePath
+  let contentLines = lines contents
+  parseLine contentLines
 
 parseLine :: [String] -> IO()
 parseLine [] = return ()
@@ -47,7 +53,7 @@ displayHeader level text = do
     _ -> displayH6 text  -- Fallback to H6 for any level > 6
   putStrLn ""
   setSGR [Reset]
-  
+
 readLine = do
   -- contents <- readFile()
   let contents = lines testCases
